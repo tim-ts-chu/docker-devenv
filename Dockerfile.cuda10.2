@@ -1,16 +1,4 @@
-FROM ubuntu:18.04
-
-# my basic dev setting
-
-RUN apt-get update
-RUN apt-get install -y git vim build-essential cmake python3-dev
-#RUN cd ~; git clone https://github.com/tim-ts-chu/linux-config.git
-#RUN ~/linux-config/install.sh
-#RUN mkdir /root/_UbuntuSync
-
-# basic ml setting
-RUN apt-get install -y python3-pip
-RUN pip3 install numpy matplotlib 
+FROM timtschu/dev:devbase
 
 # CUDA
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -43,10 +31,4 @@ ENV LD_LIBRARY_PATH /usr/local/nvidia/lib:/usr/local/nvidia/lib64
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 ENV NVIDIA_REQUIRE_CUDA "cuda>=10.2 brand=tesla,driver>=384,driver<385 brand=tesla,driver>=396,driver<397 brand=tesla,driver>=410,driver<411 brand=tesla,driver>=418,driver<419"
-
-
-# install pytorch
-RUN pip3 install torch torchvision
-
-
 
