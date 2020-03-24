@@ -1,0 +1,5 @@
+FROM timtschu/devenv:cuda10.1-cudnn7-devel
+RUN pip3 install torch=='1.4.0' 
+RUN pip3 install torchvision=='0.5.0'
+
+# more complete source: https://github.com/pytorch/pytorch/blob/master/docker/pytorch/Dockerfile

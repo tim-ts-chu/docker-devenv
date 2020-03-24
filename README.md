@@ -2,6 +2,7 @@
 
 Dockerfile Source:
 cuda images: https://hub.docker.com/r/nvidia/cuda/
+pytorch images: https://github.com/pytorch/pytorch/blob/master/docker/pytorch/Dockerfile
 
 image hierarchy:
 
@@ -11,4 +12,5 @@ image hierarchy:
 * cuda10.1-cudnn7-runtime
 * cuda10.1-devel
 * cuda10.1-cudnn7-devel
+* pytorch
 

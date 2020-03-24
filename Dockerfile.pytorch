@@ -1,3 +1,0 @@
-FROM timtschu/devenv:cuda10.1-cudnn7-devel
-
-RUN pip3 install torch torchvision

@@ -15,5 +15,9 @@
 #docker build . -f cuda/Dockerfile.10.1-devel -t timtschu/devenv:cuda10.1-devel
 #docker build . -f cuda/Dockerfile.10.1-cudnn7-devel -t timtschu/devenv:cuda10.1-cudnn7-devel
 
-docker build . -f Dockerfile.pytorch -t timtschu/devenv:pytorch
+# pytorch 1.4.0
+#docker build . -f Dockerfile.pytorch1.4.0 -t timtschu/devenv:pytorch1.4.0
+
+# openai gym 0.17.1
+docker build . -f Dockerfile.gym0.17.1 -t timtschu/devenv:gym0.17.1
 
