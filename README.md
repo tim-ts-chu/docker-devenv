@@ -1,11 +1,14 @@
-# mydocker
+# docker-devenv
+
+Dockerfile Source:
+cuda images: https://hub.docker.com/r/nvidia/cuda/
 
 image hierarchy:
 
 * devbase
-* cuda10.2-base
-* cuda10.2-runtime
-* cuda10.2-cudnn7-runtime
-* cuda10.2-devel
-* cuda10.2-cudnn7-devel
+* cuda10.1-base
+* cuda10.1-runtime
+* cuda10.1-cudnn7-runtime
+* cuda10.1-devel
+* cuda10.1-cudnn7-devel
 
