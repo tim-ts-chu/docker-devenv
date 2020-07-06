@@ -1,13 +1,24 @@
 FROM ubuntu:18.04
 
+# install conda
+COPY install.sh /root/
+RUN /root/install.sh
+
+# build latest neovim
+COPY install_neovim.sh /root/
+RUN /root/install_neovim.sh
+
+# vim-plug
+COPY install_vim-plug.sh /root/
+RUN /root/install_vim-plug.sh
+
 # my basic dev env setting
 
-RUN apt-get update
-RUN apt-get install -y git vim build-essential cmake python3-dev python3-pip
-RUN cd ~; git clone https://github.com/tim-ts-chu/linux-config.git
-RUN ~/linux-config/install.sh
-RUN mkdir /root/_UbuntuSync
+
+#RUN cd ~; git clone https://github.com/tim-ts-chu/linux-config.git
+#RUN ~/linux-config/install.sh
+#RUN mkdir /root/_UbuntuSync
 
 # basic python module
-RUN pip3 install numpy matplotlib 
+#RUN pip3 install numpy matplotlib
 
